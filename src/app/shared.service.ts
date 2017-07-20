@@ -2,14 +2,26 @@ import { Injectable } from '@angular/core';
 import { Http, Headers, Response } from "@angular/http";
 import 'rxjs/Rx';
 import { Observable } from "rxjs";
+import { Subject }  from 'rxjs/Subject';
 
 @Injectable()
 export class SharedService {
 
+
    egenSolutionUrl = "http://mocker.egen.io/users/";
 
+   private notify = new Subject<any>();
+   notifyObservable$ = this.notify.asObservable();
 
   constructor(private _http: Http) { }
+
+public notifyOther(data: any) {
+     console.log(data);
+      if (data) {
+        this.notify.next(data.id);
+      }
+    }
+
 
   findAllUsers() {
                return this._http.get(this.egenSolutionUrl)

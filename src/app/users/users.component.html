@@ -16,7 +16,7 @@
    </thead>
 
    <tbody>
-     <tr *ngFor="let user of users;" routerLinkActive="active" [routerLink]="['/user-profile']" style="cursor:pointer">
+     <tr *ngFor="let user of users;" routerLinkActive="active" [routerLink]="['/user-profile']" (click) = "rowClick(user)" style="cursor:pointer">
             <td><img style="width:10%;height:auto;border-radius:50%; " alt="profile Picture" src="{{user?.profilePic}}"/></td>
             <td>{{user?.firstName}}  {{user?.lastName}}</td>
             <td>{{user?.email}}</td>

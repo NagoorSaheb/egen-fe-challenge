@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {SharedService } from "./../shared.service";
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-users',
@@ -35,5 +36,7 @@ users:[{
                   }
             );
       }
+
+      rowClick(user){this._sharedService.notifyOther(user)}
 
 }
