@@ -1,0 +1,60 @@
+<div class="col-xs-12" style="padding-bottom:5%;">
+   <h2 style="vertical-align:inherit;display:inline">Create User</h2>
+   <button class="btn btn-default" id="addNew" style="float:right" routerLinkActive="active" [routerLink]="['/users']">< back</button>
+</div>
+
+  <form [formGroup]="addUser" (ngSubmit)="addUserToGroup(addUser.value)">
+       <div class="col-xs-6 form-group">
+         <label>First Name:</label>
+         <input class="form-control" type="text" placeholder="First Name" [formControl]="addUser.controls['firstName']">
+       </div>
+       <div class="col-xs-6 form-group">
+         <label>Last Name</label>
+         <input class="form-control" type="text" placeholder="Last Name" [formControl]="addUser.controls['lastName']">
+       </div>
+       <div class="col-xs-12 form-group">
+         <label>Email</label>
+          <input class="form-control" type="email" placeholder="abc@xyz.com" [formControl]="addUser.controls['email']">
+       </div>
+
+       <div class="col-xs-6 form-group">
+         <label>Street</label>
+         <input class="form-control" type="text" placeholder="Address 1" [formControl]="addUser.controls['address.street']">
+       </div>
+
+       <div class="col-xs-6 form-group">
+         <label>City</label>
+         <input class="form-control" type="text" placeholder="Apt #" [formControl]="addUser.controls['address.city']">
+       </div>
+
+       <div class="col-xs-6 form-group">
+         <label>State</label>
+         <input class="form-control" type="text" placeholder="City" [formControl]="addUser.controls['address.state']">
+       </div>
+
+       <div class="col-xs-6 form-group">
+         <label>Zip Code</label>
+         <input class="form-control" type="text" placeholder="City" [formControl]="addUser.controls['address.zip']">
+       </div>
+
+       <div class="col-xs-6 form-group">
+         <label>Country</label>
+         <input class="form-control" type="text" placeholder="Company Name" [formControl]="addUser.controls['address.country']">
+       </div>
+
+       <div class="col-xs-6 form-group">
+         <label>Company Name</label>
+         <input class="form-control" type="text" placeholder="Company Name" [formControl]="addUser.controls['company.companyName']">
+       </div>
+
+       <div class="col-xs-6 form-group">
+         <label>Company Website</label>
+         <input class="form-control" type="text" placeholder="Company Name" [formControl]="addUser.controls['company.companyWebsite']">
+       </div>
+
+<br>
+
+       <div class="form-group">
+         <button type="submit" [disabled]="!addUser.valid" class="btn btn-danger" style="margin-top:10%;float:left">Add</button>
+       </div>
+     </form>
