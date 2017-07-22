@@ -12,30 +12,28 @@ export class AddUserComponent implements OnInit {
   bootstrap: [AddUserComponent];
   addUser : FormGroup;
 
-constructor(private _sharedService: SharedService, fb:FormBuilder){
+constructor(private _sharedService: SharedService, private fb:FormBuilder){
 
-this.addUser = fb.group({
-      // We can set default values by passing in the corresponding value or leave blank if we wish to not set the value. For our example, we’ll default the gender to female.
-
+this.addUser =this.fb.group({
       'firstName' : '',
       'lastName': '',
       'email' : '',
-      'address':{
-                  'street': '',
+      'address':this.fb.group({
+                   'street': '',
                     'city':'',
                     'state':'',
                     'zip':'',
                     'country':''
-                },
+                }),
 
-      'company':{
+      'company':this.fb.group({
                 'companyName':'',
                 'companyWebsite':''
-                },
+                }),
 
       'profilePic':''
     })
-  }
+}
 
   ngOnInit() {
 
@@ -47,7 +45,7 @@ this.addUser = fb.group({
     this._sharedService.addUserToGroup(JSON.stringify(this.addUser))
       .subscribe(lstresult => {
         if(lstresult){
-        console.log("user added");
+           console.log("user added");
         }
          },
         error => {console.log(error);}

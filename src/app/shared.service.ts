@@ -9,6 +9,7 @@ export class SharedService {
 
 
    egenSolutionUrl = "http://mocker.egen.io/users/";
+   allUsers = "bulk";
 
   public id : any;
 

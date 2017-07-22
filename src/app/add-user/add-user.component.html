@@ -5,56 +5,56 @@
 
   <form [formGroup]="addUser" (ngSubmit)="addUserToGroup(addUser.value)">
        <div class="col-xs-6 form-group">
-         <label>First Name:</label>
-         <input class="form-control" type="text" placeholder="First Name" required [formControl]="addUser.controls['firstName']">
+         <label>First Name </label>
+           <input class="form-control" type="text" placeholder="First Name" required formControlName = "firstName">
        </div>
        <div class="col-xs-6 form-group">
-         <label>Last Name</label>
-         <input class="form-control" type="text" placeholder="Last Name" required [formControl]="addUser.controls['lastName']">
+         <label>Last Name </label>
+           <input class="form-control" type="text" placeholder="Last Name" required formControlName ="lastName">
        </div>
        <div class="col-xs-12 form-group">
-         <label>Email</label>
-          <input class="form-control" type="email" placeholder="abc@xyz.com" required [formControl]="addUser.controls['email']">
+          <label>Email</label>
+             <input class="form-control" type="email" placeholder="abc@xyz.com" required formControlName="email">
        </div>
 
+       <div formGroupName="address">
        <div class="col-xs-6 form-group">
          <label>Street</label>
-         <input class="form-control" type="text" placeholder="Address 1" required [formControl]="addUser.controls['address.street']">
+           <input class="form-control" type="text" placeholder="Address 1" required formControlName="street">
        </div>
 
        <div class="col-xs-6 form-group">
-         <label>City</label>
-         <input class="form-control" type="text" placeholder="Apt #" required [formControl]="addUser.controls['address.city']">
+         <label>City </label>
+            <input class="form-control" type="text" placeholder="Apt #" required formControlName = "city">
        </div>
 
        <div class="col-xs-6 form-group">
          <label>State</label>
-         <input class="form-control" type="text" placeholder="City" required [formControl]="addUser.controls['address.state']">
+            <input class="form-control" type="text" placeholder="City" required formControlName ="state">
        </div>
 
        <div class="col-xs-6 form-group">
-         <label>Zip Code</label>
-         <input class="form-control" type="text" placeholder="City"  required [formControl]="addUser.controls['address.zip']">
+         <label>Zip Code </label>
+           <input class="form-control" type="text" placeholder="Zip Code"  required formControlName="zip">
        </div>
-
        <div class="col-xs-6 form-group">
-         <label>Country</label>
-         <input class="form-control" type="text" placeholder="Company Name" required [formControl]="addUser.controls['address.country']">
+         <label>Country </label>
+           <input class="form-control" type="text" placeholder="Country" required formControlName="country">
        </div>
-
+       </div>
+       <div formGroupName="company">
        <div class="col-xs-6 form-group">
          <label>Company Name</label>
-         <input class="form-control" type="text" placeholder="Company Name" [formControl]="addUser.controls['company.companyName']">
+           <input class="form-control" type="text" placeholder="Company Name" required formControlName="companyName">
        </div>
 
        <div class="col-xs-6 form-group">
          <label>Company Website</label>
-         <input class="form-control" type="text" placeholder="Company Name" [formControl]="addUser.controls['company.companyWebsite']">
+            <input class="form-control" type="text" placeholder="Company Name" required formControlName="companyWebsite">
        </div>
-
+       </div>
 <br>
-
-       <div class="form-group">
-         <button type="submit" [disabled]="!addUser.valid" class="btn btn-danger" style="margin-top:10%;float:left">Add</button>
+       <div class="col-xs-12 form-group">
+         <button type="submit" [disabled]="!addUser.valid" class="btn btn-danger" style="margin-top:2%;">Add</button>
        </div>
-     </form>
+ </form>
