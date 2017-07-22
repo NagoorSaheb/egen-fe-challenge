@@ -15,8 +15,6 @@ label{
  color: #ff6600 !important;
 }
 
-
-
 .btn {
 border-color: #ff6600 !important;
  color: #ff6600 !important;
@@ -28,13 +26,20 @@ border-color: #ff6600 !important;
  background-color: #ff6600 !important;
  color: white !important;
 }
+
 .navbar{
 padding:2%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.navbar-toggle {
-    border-color: #ff6600 !important;
+
+.navbar-nav>li>a{
+  color:white !important;
 }
+
+.collapse.in{
+   background-color: rgba(85, 93, 104, 0.95)  !important;
+}
+
 .icon-bar{
   background-color:#ff6600 !important;
 }
