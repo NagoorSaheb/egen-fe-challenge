@@ -37,7 +37,7 @@ public notifyOther(data: any) {
 
    deleteUserById(userId) {
              return this._http.delete(this.egenSolutionUrl + userId)
-                        .map(response => { { return response.json() }; })
+                        .map(response => { { return response }; })
                         .catch(error => Observable.throw(error.json().error));
                          }
 

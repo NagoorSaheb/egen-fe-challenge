@@ -6,40 +6,40 @@
   <form [formGroup]="addUser" (ngSubmit)="addUserToGroup(addUser.value)">
        <div class="col-xs-6 form-group">
          <label>First Name:</label>
-         <input class="form-control" type="text" placeholder="First Name" [formControl]="addUser.controls['firstName']">
+         <input class="form-control" type="text" placeholder="First Name" required [formControl]="addUser.controls['firstName']">
        </div>
        <div class="col-xs-6 form-group">
          <label>Last Name</label>
-         <input class="form-control" type="text" placeholder="Last Name" [formControl]="addUser.controls['lastName']">
+         <input class="form-control" type="text" placeholder="Last Name" required [formControl]="addUser.controls['lastName']">
        </div>
        <div class="col-xs-12 form-group">
          <label>Email</label>
-          <input class="form-control" type="email" placeholder="abc@xyz.com" [formControl]="addUser.controls['email']">
+          <input class="form-control" type="email" placeholder="abc@xyz.com" required [formControl]="addUser.controls['email']">
        </div>
 
        <div class="col-xs-6 form-group">
          <label>Street</label>
-         <input class="form-control" type="text" placeholder="Address 1" [formControl]="addUser.controls['address.street']">
+         <input class="form-control" type="text" placeholder="Address 1" required [formControl]="addUser.controls['address.street']">
        </div>
 
        <div class="col-xs-6 form-group">
          <label>City</label>
-         <input class="form-control" type="text" placeholder="Apt #" [formControl]="addUser.controls['address.city']">
+         <input class="form-control" type="text" placeholder="Apt #" required [formControl]="addUser.controls['address.city']">
        </div>
 
        <div class="col-xs-6 form-group">
          <label>State</label>
-         <input class="form-control" type="text" placeholder="City" [formControl]="addUser.controls['address.state']">
+         <input class="form-control" type="text" placeholder="City" required [formControl]="addUser.controls['address.state']">
        </div>
 
        <div class="col-xs-6 form-group">
          <label>Zip Code</label>
-         <input class="form-control" type="text" placeholder="City" [formControl]="addUser.controls['address.zip']">
+         <input class="form-control" type="text" placeholder="City"  required [formControl]="addUser.controls['address.zip']">
        </div>
 
        <div class="col-xs-6 form-group">
          <label>Country</label>
-         <input class="form-control" type="text" placeholder="Company Name" [formControl]="addUser.controls['address.country']">
+         <input class="form-control" type="text" placeholder="Company Name" required [formControl]="addUser.controls['address.country']">
        </div>
 
        <div class="col-xs-6 form-group">
